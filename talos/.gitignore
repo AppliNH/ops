@@ -15,5 +15,5 @@
 # vendor/
 
 # DEPS
-flyctl
-hugo
+talosctl-darwin-amd64
+talosctl

@@ -15,5 +15,4 @@
 # vendor/
 
 # DEPS
-flyctl
-hugo
+prometheus-sample-app
