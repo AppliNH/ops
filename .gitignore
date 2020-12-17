@@ -17,3 +17,6 @@
 # DEPS
 flyctl
 hugo
+/crypter/lib/decrypted/
+/crypter/lib/encrypted/
+/bs-crypt/bs-crypt
