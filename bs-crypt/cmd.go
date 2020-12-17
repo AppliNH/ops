@@ -55,8 +55,8 @@ func encryptCmd() *cobra.Command {
 
 func decryptCmd() *cobra.Command {
 	rootCmd := &cobra.Command{
-		Use:   defaultEncryptUsage,
-		Short: defaultEncryptUsage,
+		Use:   defaultDecryptUsage,
+		Short: defaultDecryptUsage,
 	}
 	rootCmd.PersistentFlags().StringVarP(&srcDir, "src", "s", defaultSrcDir, "source directory for encryption / decryption")
 	rootCmd.PersistentFlags().StringVarP(&dstDir, "dest", "d", defaultDstDir, "destination directory for encryption / decryption")
