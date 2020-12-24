@@ -3,6 +3,8 @@
 BIN_DIR=$(PWD)/bin
 BIN=$(BIN_DIR)/ddns
 
+# For gmail smpt use an app password. Needed when you have 2FA setup onthe account.
+
 print:
 
 dep:
