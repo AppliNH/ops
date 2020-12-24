@@ -4,7 +4,11 @@ We tend to use CI and CD as developers, but we need users to have an easy way to
 
 The deployment infrastructure they target varies also from a Desktop, to a multi-cluster kubernettes.
 
-SO we need an anstraction layer that can handle everything via a shell to each.
+SO we need an abstraction layer that can handle everything via a shell to each.
+
+Terraform is one common approach but that more for devs
+
+Deployer below is more for a User to easily deploy and have a feedack loop on the deployment.
 
 github.com/jerson/deployer
 - a simple TUI

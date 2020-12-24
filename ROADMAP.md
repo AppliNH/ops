@@ -1,6 +1,7 @@
 # Roadmap
 
 Goals
+
 - embedded as single binary like everything else, but also can break out to seeperate.
 - combine CQRS that we need for the core archi with the needs of analytics. They basically are the same thing. Events, Event Processors and then Event Aggrgattion ( a Materialized View) and then it gos back aroudn again in that the CUD on the Materialiszed View is an Event. SO you end up with pipes or graphs of events...
 - the difference of course is that analytics needs a TimeSeries DB, and Core does not. But they both need CQRS style of architecture.
@@ -112,6 +113,7 @@ https://github.com/thealetheia/cutest
 ## Collectors
 
 github.com/rudderlabs/analytics-go
+
 - examples
 https://github.com/mattermost/mattermost-server/blob/master/services/telemetry/telemetry.go
 
@@ -188,3 +190,10 @@ https://appfleet.com/blog/deploying-secure-firecracker-microvms-on-k8s-using-wea
 
 https://github.com/talos-systems/talos
 - firecrackr but bettr !!!!
+
+
+## CQRS
+
+https://github.com/function61/eventhorizon
+
+The other stuff is perfect for us !!
