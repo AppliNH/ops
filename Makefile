@@ -1,18 +1,26 @@
+# MUST have for Windows CI to work..
+.DEFAULT_GOAL       := print
 
+BOOTY_FSPATH=./../booty
+# OS.mk must be explicitly first...
+include $(BOOTY_FSPATH)/os.mk
+include $(BOOTY_FSPATH)/help.mk
+include $(BOOTY_FSPATH)/gitr.mk
+include $(BOOTY_FSPATH)/mkdep/*.mk
 
-BOILERPLATE_FSPATH=./../boot/boilerplate
-include $(BOILERPLATE_FSPATH)/help.mk
-include $(BOILERPLATE_FSPATH)/os.mk
-include $(BOILERPLATE_FSPATH)/gitr.mk
-
-
-REPO_MK_FSPATH=$(PWD)
-include $(REPO_MK_FSPATH)/hug.mk
-include $(REPO_MK_FSPATH)/dwn.mk
-include $(REPO_MK_FSPATH)/fly.mk
+all: print dep example-all
 
 print:
-	@echo hey ops
+	@echo -- OS --
+	$(MAKE) os-print
+	@echo
+	$(MAKE) dep-all-print
+
+dep:
+	$(MAKE) dep-all
+	
+example-all:
+	cd ./example && $(MAKE) all
 
 
 

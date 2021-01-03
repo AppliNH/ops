@@ -1,30 +1,40 @@
-# https://github.com/termbacktime/termbacktime
+LIB=https://github.com/termbacktime/termbacktime
+LIB_FOLDER=$(PWD)/termbacktime
 
-BIN_DIR=$(PWD)/bin
-BIN=$(BIN_DIR)/termshot
+
+BIN=termshot
+BIN_FOLDER=$(PWD)/bin/$(BIN)
 
 print:
-	@echo $(BIN)
+		@echo 
+	@echo LIB: $(LIB)
+	@echo LIB_FOLDER: $(LIB_FOLDER)
+	@echo 
+	@echo BIN: $(BIN)
+	@echo BIN_FOLDER: $(BIN_FOLDER)
+	@echo
 
 dep:
-	git clone https://github.com/termbacktime/termbacktime
+	git clone $(LIB)
+dep-delete:
+	rm -rf $(LIB_FOLDER)
 
 build:
-	cd termbacktime && go build -o $(BIN) .
+	cd $(LIB_FOLDER) && go build -o $(BIN_FOLDER) .
 
 run:
-	cd $(BIN_DIR) && $(BIN)
+	$(BIN_FOLDER)
 
 record:
 	# needs github auth first
 	#$(BIN) auth
-	$(BIN) auth --set-token 6f39ab1a713a71cea18b8d0c8e6eefa4b332005a
+	$(BIN_FOLDER) auth --set-token 6f39ab1a713a71cea18b8d0c8e6eefa4b332005a99
 
-	$(BIN) record --open
+	$(BIN_FOLDER) record --open
 	
 live:
 	# does not use github at all
-	$(BIN) live
+	$(BIN_FOLDER) live
 
 
 
